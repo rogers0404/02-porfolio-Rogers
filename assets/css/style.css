@@ -83,6 +83,23 @@
   /***********************************************************************/
 
   /********************** apply styles to Hero Class *********************/
-  
+  .hero {
+    background-image: url("../images/image2.jpg");
+    /*Image was taken of https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 */
+    padding: 10px 15px;
+    height: 400px;
+    background-attachment: fixed;
+    background-size: 100% 75%;
+    display: flex;                  /*  Applying FlexBox to */
+    justify-content: flex-end;      /*  Every element inside*/
+    align-items: flex-end;          /*  Section Hero        */
+  }
+
+  .hero .sub-title h1{
+    font-size: 25px;
+    color: var(--first-color);
+    padding: 15px 5px;
+    background-color: var(--backg-color);
+  }
   /***********************************************************************/
  
