@@ -86,7 +86,7 @@
   .hero {
     background-image: url("../images/image2.jpg");
     /*Image was taken of https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 */
-    padding: 10px 15px;
+    padding: 15px 30px;
     height: 400px;
     background-attachment: fixed;
     background-size: 100% 75%;
