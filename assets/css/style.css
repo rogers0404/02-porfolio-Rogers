@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --first-color: #b2ca2b;
+    --Second-color: #284b5e;
+    --third-color: #b239b2;
+    --fourth-color:  #d2e7e4;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --backg-color: #3f9790;
+  }
+
+  /********** Styling Body Tag with color, Background and Font *********/
+  body {
+    
+     background-color: var(--fourth-color);
+     color: var(--third-color);
+     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  /***********************************************************************/
+
+  /**************************Header***************************************/
+  /********************** apply styles to <header> ***********************/
+  header {
+        padding: 15px 15px 15px 0px;
+        background-color: var(--Second-color);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: -webkit-sticky;
+        position: sticky; /*to mantain the header in one place sticky*/
+  }
+ 
+  header h1 {
+    font-size: 36px;
+    color: var(--first-color);
+    /*Apply those style to look at the mock up*/
+    padding-left: 20px;
+    padding-right: 5px; 
+    background-color: var(--backg-color);
+    /******************************************/
+    text-shadow: 0 0 10px var(--shadow-color);
+  }
+
+  header a {
+    text-decoration: none;
+    color: var(--first-color);
+  }
+
+  
+  header nav {
+    margin: 7px 0;
+  }
+
+  /*Applying Flexbox to the unordered list*/
+  header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  header nav ul li a {
+    margin: 0 15px;
+    padding: 5px 0px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px var(--shadow-color);
+   border-bottom: 5px solid var(--first-color); 
+  }
+
+  /*Aplying Style to A tag when the cursor is over*/
+  header nav ul li a:hover {
+    color: var(--third-color);
+    border-radius: 10px;
+    text-shadow: none;
+    border-bottom: 5px solid var(--third-color); 
+  }
+  /***********************************************************************/
+
+  /********************** apply styles to Hero Class *********************/
+  
+  /***********************************************************************/
+ 
