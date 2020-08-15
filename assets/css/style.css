@@ -5,9 +5,9 @@
   }
 
   :root {
-    --first-color: #b2ca2b;
+    --first-color: #b239b2;
     --Second-color: #284b5e;
-    --third-color: #b239b2;
+    --third-color: #b2ca2b;
     --fourth-color:  #d2e7e4;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --backg-color: #3f9790;
@@ -17,7 +17,7 @@
   body {
     
      background-color: var(--fourth-color);
-     color: var(--third-color);
+     color: var(--first-color);
      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
   /***********************************************************************/
@@ -27,22 +27,25 @@
   header {
         padding: 15px 15px 15px 0px;
         background-color: var(--Second-color);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        position: -webkit-sticky;
-        position: sticky; /*to mantain the header in one place sticky*/
+        display: flex;                   /*     Applying FlexBox to */
+        justify-content: space-between;  /* <== Every element inside*/
+        flex-wrap: wrap;                 /*     Section Header      */
+        position: -webkit-sticky;        /*   to mantain the header*/
+        position: sticky;               /*  in one place sticky  */
+        top: 0;
   }
  
   header h1 {
     font-size: 36px;
     color: var(--first-color);
     /*Apply those style to look at the mock up*/
-    padding-left: 20px;
-    padding-right: 5px; 
+    padding: 5px 5px 5px 20px;
     background-color: var(--backg-color);
     /******************************************/
     text-shadow: 0 0 10px var(--shadow-color);
+    /*******Applying rounded shape to H1*******/
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 
   header a {
@@ -52,7 +55,7 @@
 
   
   header nav {
-    margin: 7px 0;
+    margin: 10px;
   }
 
   /*Applying Flexbox to the unordered list*/
@@ -70,7 +73,7 @@
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 10px var(--shadow-color);
-   border-bottom: 5px solid var(--first-color); 
+    border-bottom: 5px solid var(--first-color); 
   }
 
   /*Aplying Style to A tag when the cursor is over*/
@@ -87,19 +90,268 @@
     background-image: url("../images/image2.jpg");
     /*Image was taken of https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 */
     padding: 15px 30px;
-    height: 400px;
+    height: 400px;               /*Defining the height of Hero Section*/
     background-attachment: fixed;
     background-size: 100% 75%;
-    display: flex;                  /*  Applying FlexBox to */
-    justify-content: flex-end;      /*  Every element inside*/
-    align-items: flex-end;          /*  Section Hero        */
+    display: flex;               /*     Applying FlexBox to */
+    justify-content: flex-end;   /* <== Every element inside*/
+    align-items: flex-end;       /*     Section Hero        */
   }
 
   .hero .sub-title h1{
     font-size: 25px;
     color: var(--first-color);
-    padding: 15px 5px;
+    padding: 5px 5px;
     background-color: var(--backg-color);
+    /*******Applying rounded shape left to H1*******/
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
   /***********************************************************************/
  
+   /*********** apply styles to Self-info Porfolio Class *****************/
+    .container{
+        display: flex;
+        margin: 30px auto;
+ }
+
+ .self-info{
+    margin: 30px 45px 30px 30px;
+ }
+
+   .category {
+    flex: 1 15%;                      /*     Applying FlexBox to  */
+    display: flex;                    /* <== category to get 25%  */
+    flex-wrap: wrap;               /*   <== of the space         */
+    align-items: center;            /*     availiable in Div Tag*/
+    margin: 0px 20px;
+    justify-content: flex-end;
+   }
+
+   .category h2{
+       text-align: right;
+       padding: 5px 15px;
+  
+   }
+
+   .text-info {
+    flex: 2 85%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+   }
+
+   .text-info .self{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .imgPersonal{
+     height: 75%;
+     width: 15%;
+     margin: 15px;
+   }
+
+   .border-right{
+    border-right: 5px solid var(--first-color); 
+   }
+
+   .list a {
+    text-decoration: none;
+    color: var(--first-color);
+  }
+
+  
+  .list {
+    margin: 10px;
+    width: inherit;       /*I used this property because it looks like the mock up, i was found in the browser inspector*/
+  }
+
+  /*Applying Flexbox to the unordered list for Contact Me */
+  .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  .list ul li a {
+    margin: 0 15px;
+    padding: 5px 0px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    border-bottom: 5px solid var(--first-color); 
+  }
+
+  /*Aplying Style to A tag when the cursor is over*/
+  .list ul li a:hover {
+    color: var(--third-color);
+    border-radius: 10px;
+    border-bottom: 5px solid var(--third-color); 
+  }
+
+  /*Defining grid for work projects*/
+  .grid-projects{
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    grid-auto-flow: dense;
+  }
+
+  /*Defining the border and font-color to every child*/
+  .item:nth-child(n){
+    border: 2px solid var(--Second-color);
+    color:  var(--first-color);
+    display: flex;                          /*     Applying FlexBox to  */
+    align-items: flex-end;                  /* <== each item to move    */
+    padding: 15px 0px;                      /*     all children bottom  */
+  }
+
+  .item:nth-child(5){
+    /*Image was taken of https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 */
+    background-image: url(../images/img1.jpg);
+    background-attachment: unset;
+    background-size: 100% 100%;
+  }
+
+  .item:nth-child(2){
+    /*Image was taken of https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80 */
+    background-image: url(../images/img2.jpg);    
+    background-attachment: unset;
+    background-size: 100% 100%;
+  }
+
+  .item:nth-child(3){
+    /*Image was taken of https://images.unsplash.com/photo-1581090123826-27b62664de96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80 */
+    background-image: url(../images/img3.jpg);    
+    background-attachment: unset;
+    background-size: 100% 100%;
+
+  }
+
+  .item:nth-child(4){
+    /*Image was taken of https://images.unsplash.com/photo-1571397872194-0ad8fbafe058?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80 */
+    background-image: url(../images/img4.jpg);
+    background-attachment: unset;
+    background-size: 100% 100%;
+  }
+  .item:nth-child(1){    
+    grid-row: span 2;
+    grid-column: span 2;
+    /*Image self-created */
+    background-image: url(../images/img5.jpg);
+    background-attachment: unset;
+    background-size: 100% 100%;
+  }
+
+  .item a {
+    text-decoration: none;
+    color: var(--first-color);
+    width: 100%;                /*This is to the tag Ankle take all the space of its father*/
+    height: 100%;               /*which is the class item                                  */
+    display: contents;          /*                                                         */
+  }
+
+  .item:nth-child(n):hover{
+    opacity: 0.5;
+  }
+
+  .item a div{
+    width: 100%;
+    height: 100%;
+  }
+
+  .item a div div{
+    align-items: flex-end;
+    justify-content: flex-end;
+     background-color: var(--backg-color); 
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .item a p{
+    font-size: 10px;
+  }
+   /***********************************************************************/
+
+    /*************Applying media queries for smaller Screen*****************/
+
+    @media screen and (max-width: 980px) {
+      header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative
+      }
+    
+      header h1 {
+        width: 100%;
+        text-align: center;
+      }
+    
+      header nav ul {
+        margin: 20px auto;
+        width: 100%;
+        justify-content: center;        
+        line-height: 2.1;
+      }
+    
+      header nav ul li a {
+        font-size: 20px;
+      }
+
+      .container{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+      }
+
+      .text-info{
+        padding: 10px;
+        width: fit-content;
+      }
+
+      .text-info .self{
+        display: block;
+      }
+
+      .imgPersonal{
+        height: 100%;
+        width: 100%;
+        margin: 10px;        
+      }
+
+      .border-right{
+        border-right: none; 
+        border-bottom: 5px solid var(--first-color); 
+      }
+
+      .category h2{
+        text-align: center;
+      }
+
+      .grid-projects{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr;
+        grid-gap: 10px;
+      }
+
+      .item:nth-child(n){
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+
+      .list ul {
+        display: block;
+        font-size: 20px;
+      }
+    }
+     /***********************************************************************/
