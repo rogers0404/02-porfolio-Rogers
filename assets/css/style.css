@@ -283,6 +283,7 @@
     /*************Applying media queries for smaller Screen*****************/
 
     @media screen and (max-width: 980px) {
+      /*Styling header to look centered and good looking and pleased to de visitors*/
       header {
         padding-bottom: 0;
         justify-content: center;
@@ -304,7 +305,9 @@
       header nav ul li a {
         font-size: 20px;
       }
+     /*********************************************************************************/
 
+     /*******Applying Styling to the Self-Information Section to show just one colunm */
       .container{
         padding: 10px;
         display: grid;
@@ -354,4 +357,4 @@
         font-size: 20px;
       }
     }
-     /***********************************************************************/
+     /*****************************************************************************/
