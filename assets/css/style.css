@@ -5,10 +5,10 @@
   }
 
   :root {
-    --first-color: #9d0208;
-    --Second-color: #dc2f02;
+    --first-color: #ffffff;   /*ready*/
+    --Second-color: #03045e; /*ready*/
     --third-color: #b2ca2b;
-    --fourth-color:  #faa307;
+    --fourth-color:  #90e0ef; /*ready*/
     --fifth-color: #ffba08;
     --shadow-color: rgba(0, 0, 0, 0.5);
     --backg-color: #3f9790;
@@ -18,7 +18,7 @@
   body {
     
      background-color: var(--fourth-color);
-     color: var(--first-color);
+     color: var(--Second-color);
      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
   /***********************************************************************/
@@ -100,7 +100,7 @@
 
   .hero .sub-title h1{
     font-size: 25px;
-    color: var(--first-color);
+    color: var(--Second-color);
     padding: 5px 5px;
     background-color: var(--fourth-color);
     /*******Applying rounded shape left to H1*******/
@@ -187,14 +187,15 @@
     padding: 5px 0px;
     font-weight: lighter;
     font-size: 20px;
-    border-bottom: 5px solid var(--first-color); 
+    color: var(--Second-color);
+    border-bottom: 5px solid var(--Second-color); 
   }
 
   /*Aplying Style to A tag when the cursor is over*/
   .list ul li a:hover {
-    color: var(--Second-color);
+    color: var(--fifth-color);
     border-radius: 10px;
-    border-bottom: 5px solid var(--Second-color); 
+    border-bottom: 5px solid var(--fifth-color); 
   }
 
   /*Defining grid for work projects*/
@@ -211,7 +212,7 @@
   /*Defining the border and font-color to every child*/
   .item:nth-child(n){
     border: 2px solid var(--Second-color);
-    color:  var(--first-color);
+    color:  var(--Second-color);
     display: flex;                          /*     Applying FlexBox to  */
     align-items: flex-end;                  /* <== each item to move    */
     padding: 15px 0px;                      /*     all children bottom  */
@@ -248,13 +249,13 @@
   }
 
   .item:nth-child(2){
-     background-image: url(../images/img2.jpg);    
+     background-image: url(../images/img2.png);    
     background-attachment: unset;
     background-size: 100% 100%;
   }
 
   .item:nth-child(3){
-    background-image: url(../images/img3.png);    
+    background-image: url(../images/img3.jpg);    
     background-attachment: unset;
     background-size: 100% 100%;
 
@@ -277,7 +278,7 @@
 
   .item a {
     text-decoration: none;
-    color: var(--first-color);
+    color: var(--Second-color);
     width: 100%;                /*This is to the tag Ankle take all the space of its father*/
     height: 100%;               /*which is the class item                                  */
     display: contents;          /*                                                         */
